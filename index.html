@@ -2,18 +2,20 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>My Element</title>
+	<title>&lt;facebook&gt;</title>
 
 	<!-- Importing Web Component's Polyfill -->
 	<script src="lib/polymer.min.js"></script>
 
 	<!-- Importing Custom Elements -->
-	<link rel="import" href="src/my-element.html">
+	<link rel="import" href="src/facebook.html">
 </head>
 <body>
 
 	<!-- Using Custom Elements -->
-	<my-element></my-element>
+	<facebook></facebook>
+	<facebook href="http://facebook.com" layout="box_count" height="80"></facebook>
+	<facebook href="http://facebook.com" layout="standard" height="50" width="250"></facebook>
 
 </body>
 </html>
