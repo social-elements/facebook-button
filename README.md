@@ -1,12 +1,14 @@
 # &lt;facebook&gt;
 
-A Web Component implementation of [Facebook's like button](https://developers.facebook.com/docs/reference/plugins/like/) using Polymer.
+Web Component wrapper for [Facebook's like button](https://developers.facebook.com/docs/reference/plugins/like/) using Polymer.
 
 > Maintained by [Zeno Rocha](https://github.com/zenorocha).
 
 ## Demo
 
 ![Facebook Element](http://zno.io/Quih/facebook-element.png)
+
+> [Check it live](http://customelements.github.io/facebook-element).
 
 ## Usage
 
@@ -53,6 +55,8 @@ Attribute     | Options             | Default        | Description
 
 ## History
 
+* [v0.1.0](https://github.com/customelements/facebook-element/releases/tag/0.1.0) August 20, 2013
+	* Initial development release
 * v0.0.1 August 19, 2013
 	* Started project using [boilerplate-element](https://github.com/customelements/boilerplate-element)
 
