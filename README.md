@@ -8,7 +8,7 @@ Web Component wrapper for [Facebook's like button](https://developers.facebook.c
 
 ![Facebook Element](http://zno.io/Quih/facebook-element.png)
 
-> [Check it live](http://customelements.github.io/facebook-element).
+> [Check it live](http://zenorocha.github.io/facebook-element).
 
 ## Usage
 
@@ -55,7 +55,9 @@ Attribute     | Options             | Default        | Description
 
 ## History
 
-* [v0.1.0](https://github.com/customelements/facebook-element/releases/tag/0.1.0) August 20, 2013
+* [v0.1.1](https://github.com/zenorocha/facebook-element/releases/tag/0.1.1) September 3, 2013
+	* Use Polymer from CDN and update it to v0.0.20130816
+* [v0.1.0](https://github.com/zenorocha/facebook-element/releases/tag/0.1.0) August 20, 2013
 	* Initial development release
 * v0.0.1 August 19, 2013
 	* Started project using [boilerplate-element](https://github.com/customelements/boilerplate-element)
