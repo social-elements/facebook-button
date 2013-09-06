@@ -1,8 +1,6 @@
-# &lt;facebook&gt;
+# &lt;facebook-button&gt;
 
-Web Component wrapper for [Facebook's like button](https://developers.facebook.com/docs/reference/plugins/like/) using Polymer.
-
-> Maintained by [Zeno Rocha](https://github.com/zenorocha).
+Web Component wrapper for [Facebook's button](https://developers.facebook.com/docs/reference/plugins/like/) using Polymer.
 
 ## Demo
 
@@ -14,20 +12,20 @@ Web Component wrapper for [Facebook's like button](https://developers.facebook.c
 
 1. Import Web Components' polyfill:
 
-	```html
+	```xml
 	<script src="//cdnjs.cloudflare.com/ajax/libs/polymer/0.0.20130816/polymer.min.js"></script>
 	```
 
 2. Import Custom Element:
 
-	```html
-	<link rel="import" href="src/facebook.html">
+	```xml
+	<link rel="import" href="src/facebook-button.html">
 	```
 
 3. Start using it!
 
 	```xml
-	<facebook></facebook>
+	<facebook-button></facebook-button>
 	```
 
 ## Options

@@ -1,4 +1,4 @@
-<polymer-element name="facebook" attributes="action colorscheme font href layout showfaces height width">
+<polymer-element name="facebook-button" attributes="action colorscheme font href layout showfaces height width">
 
   <template>
     <iframe src="//www.facebook.com/plugins/like.php?href={{href}}&amp;send=false&amp;layout={{layout}}&amp;width={{width}}&amp;height={{height}}&amp;show_faces={{showfaces}}&amp;font={{font}}&amp;colorscheme={{colorscheme}}&amp;action={{action}}" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
@@ -14,7 +14,7 @@
   </template>
 
   <script>
-    Polymer('facebook', {
+    Polymer('facebook-button', {
       action     : 'like',
       colorscheme: 'light',
       font       : 'arial',
