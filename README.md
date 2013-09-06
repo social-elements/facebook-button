@@ -62,4 +62,4 @@ Attribute     | Options             | Default        | Description
 
 ## License
 
-[MIT License](http://opensource.org/licenses/MIT)
+[MIT License](http://zenorocha.mit-license.org/) © Zeno Rocha
