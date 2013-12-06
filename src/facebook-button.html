@@ -1,14 +1,14 @@
 <polymer-element name="facebook-button" attributes="action colorscheme font href layout showfaces height width">
 
   <template>
-    <iframe src="//www.facebook.com/plugins/like.php?href={{href}}&amp;send=false&amp;layout={{layout}}&amp;width={{width}}&amp;height={{height}}&amp;show_faces={{showfaces}}&amp;font={{font}}&amp;colorscheme={{colorscheme}}&amp;action={{action}}" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+    <iframe src="//www.facebook.com/plugins/like.php?href={{href}}&amp;send=false&amp;layout={{layout}}&amp;width={{width > 0 ? width : ''}}&amp;height={{height}}&amp;show_faces={{showfaces}}&amp;font={{font}}&amp;colorscheme={{colorscheme}}&amp;action={{action}}" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 
     <style>
       iframe {
         border: none;
         overflow: hidden;
         height: {{height}}px;
-        width: {{width}}px;
+        width: {{ width > 0 ? width + "px" : width }};
       }
     </style>
   </template>
