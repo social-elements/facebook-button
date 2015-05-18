@@ -1,33 +1,83 @@
 <!-- Import Polymer -->
 <link rel="import" href="../../polymer/polymer.html">
 
-<!-- Define your custom element -->
-<polymer-element name="facebook-button" attributes="action colorscheme font href layout showfaces height width">
-
+<!-- Defines element markup -->
+<dom-module id="facebook-button">
+    <style>
+        iframe {
+            border: none;
+            overflow: hidden;
+        }
+    </style>
     <template>
-        <iframe src="//www.facebook.com/plugins/like.php?href={{href}}&amp;send=false&amp;layout={{layout}}&amp;width={{width}}&amp;height={{height}}&amp;show_faces={{showfaces}}&amp;font={{font}}&amp;colorscheme={{colorscheme}}&amp;action={{action}}" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-
-        <style>
-            iframe {
-                border: none;
-                overflow: hidden;
-                height: {{height}}px;
-                width: {{width}}px;
-            }
-        </style>
+        <iframe src$="{{iframeSource(action, colorscheme, font, href, layout, showfaces, height, width)}}" style$="{{iframeStyle(width, height)}}" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
     </template>
+</dom-module>
 
-    <script>
-        Polymer('facebook-button', {
-            action     : 'like',
-            colorscheme: 'light',
-            font       : 'arial',
-            href       : 'http://customelements.io',
-            layout     : 'button_count',
-            showfaces  : 'false',
-            height     : '20',
-            width      : '120'
-        });
-    </script>
+<!-- Registers custom element -->
+<script>
+    Polymer({
+        is         : 'facebook-button',
+        properties : {
+            action     : {
+                type   : String,
+                value  : 'like'
+            },
+            colorscheme: {
+                type   : String,
+                value  : 'light'
+            },
+            font       : {
+                type   : String,
+                value  :'arial'
+            },
+            href       : {
+                type   : String,
+                value  : 'http://customelements.io'
+            },
+            layout     : {
+                type   : String,
+                value  : 'button_count'
+            },
+            showfaces  : {
+                type   : Boolean,
+                value  : false
+            },
+            height     : {
+                type   : Number,
+                value  : 20
+            },
+            width      : {
+                type   : Number,
+                value  : 120
+            },
+            src        : {
+                type   : String,
+                computed   : ''
+            }
+        },
+        iframeSource: function (action, colorscheme, font, href, layout, showfaces, height, width) {
 
-</polymer-element>
+            var param = {
+                action : action,
+                colorscheme: colorscheme,
+                font   : font,
+                href   : href,
+                layout : layout,
+                showfaces  : showfaces,
+                height : height,
+                width  : width
+            };
+
+            var query = [];
+            Object.keys(param).forEach(function (key) {
+                query.push(key + '=' + encodeURIComponent(param[key]));
+            });
+
+            return '//facebook.com/plugins/like.php?' + query.join('&');
+        },
+        iframeStyle: function (width, height) {
+            return 'width:' + width + 'px;' + 'height:' + height + 'px;';
+        }
+    });
+</script>
